@@ -1,0 +1,6 @@
+n_per_class,n_seeds,test_final.accuracy.mean,test_final.accuracy.std,test_final.macro_f1.mean,test_final.macro_f1.std,test_final.acc_chihuahua.mean,test_final.acc_chihuahua.std,test_final.acc_muffin.mean,test_final.acc_muffin.std,test_best_val.accuracy.mean,test_best_val.accuracy.std,test_best_val.macro_f1.mean,test_best_val.macro_f1.std,test_best_val.acc_chihuahua.mean,test_best_val.acc_chihuahua.std,test_best_val.acc_muffin.mean,test_best_val.acc_muffin.std
+0,3,99.92,0.0,99.91,0.0,100.0,0.0,99.82,0.0,99.83,0.08,99.83,0.08,99.84,0.16,99.82,0.0
+10,3,98.4,0.37,98.38,0.37,98.75,0.81,97.98,0.18,98.34,0.34,98.33,0.34,98.59,0.83,98.04,0.46
+20,3,98.09,0.68,98.07,0.68,98.33,2.75,97.79,2.05,98.11,0.8,98.1,0.8,98.23,2.93,97.98,1.81
+50,3,98.76,0.13,98.75,0.13,99.01,0.7,98.47,0.77,98.93,0.13,98.92,0.13,99.27,0.33,98.53,0.32
+200,3,98.9,0.44,98.9,0.44,98.75,0.31,99.08,0.66,98.93,0.42,98.92,0.42,98.8,0.39,99.08,0.55

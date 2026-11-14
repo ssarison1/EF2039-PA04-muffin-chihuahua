@@ -1,0 +1,59 @@
+{
+  "run": "nall_noise20_seed1",
+  "n_per_class": 0,
+  "noise": 0.2,
+  "seed": 1,
+  "n_train": 4259,
+  "n_flipped": 852,
+  "config": {
+    "data_root": "data",
+    "out_dir": "runs",
+    "n_per_class": 0,
+    "noise": 0.2,
+    "seed": 1,
+    "steps": 600,
+    "eval_every": 60,
+    "batch_size": 64,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "workers": 4,
+    "no_pretrained": false,
+    "overwrite": false
+  },
+  "device": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "train_time_sec": 141.9,
+  "test_final": {
+    "accuracy": 0.8969594594594594,
+    "macro_f1": 0.8965980317203978,
+    "confusion_matrix": [
+      [
+        566,
+        74
+      ],
+      [
+        48,
+        496
+      ]
+    ],
+    "acc_chihuahua": 0.884375,
+    "acc_muffin": 0.9117647058823529
+  },
+  "best_val_step": 120,
+  "best_val_acc": 0.959915611814346,
+  "test_best_val": {
+    "accuracy": 0.9679054054054054,
+    "macro_f1": 0.9676654315060814,
+    "confusion_matrix": [
+      [
+        624,
+        16
+      ],
+      [
+        22,
+        522
+      ]
+    ],
+    "acc_chihuahua": 0.975,
+    "acc_muffin": 0.9595588235294118
+  }
+}

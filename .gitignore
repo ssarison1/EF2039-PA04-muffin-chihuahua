@@ -1,0 +1,9 @@
+# Data and training outputs are not stored in git (see README for download steps)
+data/raw/
+data/*.zip
+/runs/
+# Kaggle credentials must never be committed
+kaggle.json
+access_token
+__pycache__/
+*.pyc

@@ -1,0 +1,5 @@
+noise,n_seeds,test_final.accuracy.mean,test_final.accuracy.std,test_final.macro_f1.mean,test_final.macro_f1.std,test_final.acc_chihuahua.mean,test_final.acc_chihuahua.std,test_final.acc_muffin.mean,test_final.acc_muffin.std,test_best_val.accuracy.mean,test_best_val.accuracy.std,test_best_val.macro_f1.mean,test_best_val.macro_f1.std,test_best_val.acc_chihuahua.mean,test_best_val.acc_chihuahua.std,test_best_val.acc_muffin.mean,test_best_val.acc_muffin.std
+0.0,3,99.92,0.0,99.91,0.0,100.0,0.0,99.82,0.0,99.83,0.08,99.83,0.08,99.84,0.16,99.82,0.0
+0.1,3,96.59,0.1,96.57,0.1,96.51,1.21,96.69,1.63,98.82,0.45,98.81,0.45,98.44,0.56,99.26,0.55
+0.2,3,89.47,1.28,89.43,1.28,88.75,2.05,90.32,0.83,96.82,0.97,96.8,0.97,96.61,2.39,97.06,1.1
+0.4,3,65.09,0.49,65.01,0.48,64.64,0.9,65.62,0.18,78.91,2.37,78.6,2.23,79.22,13.73,78.55,11.19
