@@ -90,7 +90,7 @@ requirements.txt     pip alternative (exact versions)
 | CPU / RAM | AMD Ryzen AI 7 350, 16 GB |
 | OS | Windows 11 + WSL2 Ubuntu 24.04 |
 | Python / PyTorch | Python 3.11.18, PyTorch 2.11.0 (CUDA 12.8), torchvision 0.26.0 |
-| Time | about 72 s per run, about 30–35 min for all 24 runs |
+| Time | 1–10 min per run (full-data runs about 70 s; small-subset runs longer), about 64 min for all 24 runs |
 
 The RTX 50-series (Blackwell) GPU needs a CUDA 12.8+ build of PyTorch, which is why the `cu128` wheels are
 used. Other NVIDIA GPUs work with the same commands. The code also runs on CPU, but much more slowly.
@@ -128,7 +128,7 @@ python src/evaluate_all.py
 # 3.6 Classify your own images
 python src/predict.py --ckpt weights/resnet18_clean_full_seed0.pt path/to/image1.jpg path/to/image2.jpg
 
-# 3.7 Re-run every experiment of the paper (24 runs, about 30 min) and rebuild tables and figures
+# 3.7 Re-run every experiment of the paper (24 runs, about 1 hour) and rebuild tables and figures
 bash scripts/run_experiments.sh 2>&1 | tee results/run_log.txt
 ```
 
@@ -184,7 +184,7 @@ Test set: 1,184 images. Values are accuracy in % (mean ± std over 3 seeds). The
 
 Main finding: 20 clean images per class (98.1%) outperform 4,259 images with 20% wrong labels (89.5%).
 For this task, label quality matters far more than the amount of data. Selecting a checkpoint on a small
-clean validation set recovers much of the accuracy lost to noise (+7.4 points at 20% noise).
+clean validation set recovers much of the accuracy lost to noise (+7.3 points at 20% noise).
 
 Figures: `results/fig_rq1_noise.png`, `results/fig_rq2_size.png`, `results/confusion_clean.png`.
 
