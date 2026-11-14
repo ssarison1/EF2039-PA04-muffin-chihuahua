@@ -102,13 +102,13 @@ def main():
 
     # Figure RQ1
     if len(rq1) > 1:
-        fig, ax = plt.subplots(figsize=(3.3, 2.4))
+        fig, ax = plt.subplots(figsize=(3.3, 1.75))
         x = 100 * rq1["noise"]
         line(ax, x, rq1, "test_final.accuracy", C1, "o", "Final model")
         line(ax, x, rq1, "test_best_val.accuracy", C2, "s", "Best-validation checkpoint")
         ax.set_xticks(x)
         style(ax, "Flipped training labels (%)", "Test accuracy (%)")
-        ax.legend(fontsize=7, frameon=False)
+        ax.legend(fontsize=8, frameon=False)
         save(fig, out, "fig_rq1_noise")
 
     # Figure RQ2 (x axis: images per class; "all" placed at the real per-class mean count)
@@ -121,7 +121,7 @@ def main():
         order = np.argsort(x.values)
         r = rq2.iloc[order]
         xs = x.values[order]
-        fig, ax = plt.subplots(figsize=(3.3, 2.4))
+        fig, ax = plt.subplots(figsize=(3.3, 1.75))
         line(ax, xs, r, "test_final.accuracy", C1, "o", "Total")
         line(ax, xs, r, "test_final.acc_chihuahua", C2, "s", "Chihuahua")
         line(ax, xs, r, "test_final.acc_muffin", C3, "^", "Muffin")
@@ -131,7 +131,8 @@ def main():
                             for v, n in zip(xs, r["n_per_class"])])
         ax.minorticks_off()
         style(ax, "Training images per class (log scale)", "Test accuracy (%)")
-        ax.legend(fontsize=7, frameon=False)
+        ax.set_ylim(89.0, 101.5)
+        ax.legend(fontsize=8, frameon=False, loc="lower right", handlelength=1.5, labelspacing=0.2)
         save(fig, out, "fig_rq2_size")
 
     # Confusion matrix of the clean full-data model, seed 0
